@@ -1,0 +1,15 @@
+<div class="row col-xs-12 text-center controls">
+
+	<a href="#/exercise-{{page -1}}" ng-class="{'active': page > 1, 'disabled':  page < 2}" class="btn-prev btn btn-default">
+		&#8592; Previous
+	</a>
+
+	<button ng-click="submit(page, name)" type="submit" class="btn {{formState[name]['class']}}">
+		{{ formState[name]['button'] }}
+	</button>
+
+	<a href="#/exercise-{{page +1}}" ng-class="{'active': page < 2, 'disabled':  page > 1}" class="btn-next btn btn-default">
+		Next &#8594;
+	</a>
+
+</div>

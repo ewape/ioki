@@ -1,0 +1,130 @@
+@import 'bootstrap/bootstrap';
+@import 'variables';
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+section {
+	flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Times New Roman", serif;
+}
+
+h2 {
+	color: $gray;
+}
+
+.navbar {
+	&-header {
+	}
+	&-default {
+		border-width: 0 0 1px 0;
+		box-shadow: 0px 1px 5px #aaa;
+	}
+	&-brand {
+		padding: 15px;
+	}
+}
+
+.nav {
+	> li {
+		> a {
+			text-decoration: underline;
+			&:hover, &:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.form-control {
+	&.warning {
+		background-color: $yellow;
+		color: #fff;
+	}
+	&.success {
+		background-color: $green;
+		color: #fff;
+	}
+	&.error {
+		background-color: $red;
+		color: #fff;
+	}
+	&.warning, &.success, &.error {
+		border: 0 none;
+	}
+}
+
+.img-brand {
+	max-height: 100%;
+}
+
+figure {
+	.exercise-1 & {
+		height: 200px;
+	}
+	.exercise-2 & {
+		height: 400px;
+	}
+}
+
+.exercise-item {
+	min-height: 200px;
+	margin: auto;
+	.exercise-1 & {
+		max-width: 140px;
+	}
+	figure {
+		width: 100%;
+		position: relative;
+		img {
+			max-height: 100%;
+			margin: auto;
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+}
+
+.controls {
+	margin: 2rem 0;
+}
+
+.btn-prev, .btn-next {
+	position: absolute;
+	border-radius: 50%;
+}
+
+.btn-prev {
+	left: 0;
+}
+
+.btn-next {
+	right: 0;
+}
+
+.btn-default, .btn-default:hover {
+	border-color: $gray-light;
+	border-radius: 1em;
+	box-shadow: none;
+	&.active {
+		color: $yellow;
+		background-color: white;
+		border-color: $gray-light;
+		box-shadow: none;
+	}
+}
+
+footer {
+	background-color: #000;
+	padding: 1.5rem 0;
+	img {
+		height: 16px;
+		width: auto;
+	}
+}

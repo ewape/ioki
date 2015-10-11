@@ -1,0 +1,20 @@
+<sectionheader></sectionheader>
+<div class="row grid">
+	<div class="exercise-list exercise-{{page}}">
+		<div class="col-xs-6 col-sm-4 field-{{$index}}" ng-repeat="icon in labels[name].icons track by $index" ng-model="selectedOption">
+			<div class="exercise-item">
+
+				<figure>
+					<img class="img-responsive" ng-src="assets/images/{{name}}/{{icon.name}}" alt="{{icon.name}}">
+				</figure>
+
+				<select ng-click="refreshSelectClasses($event);" ng-init="selectedOption = selected[name]['label']" ng-change="updateSelected($index, selectedOption, icon.id, name); updateSelectedCount(name, page);" class="form-control" ng-model="selectedOption" ng-options="label.name as label.name for label in labels[name].labels track by label.id">
+					<option value="">Select a label</option>
+				</select>
+
+			</div>
+		</div>
+		<controls></controls>
+	</div>
+</div>
+
